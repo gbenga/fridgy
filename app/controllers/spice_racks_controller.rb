@@ -1,0 +1,2 @@
+class SpiceRacksController < ApplicationController
+end

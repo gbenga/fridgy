@@ -1,0 +1,2 @@
+module SpiceRacksHelper
+end
