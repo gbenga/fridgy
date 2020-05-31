@@ -1,0 +1,8 @@
+<h2>All of your Ingredients are right here </h2>
+<ul>
+    <% @user.ingredients.each do |i|%>
+        <li>
+            <%="Name: #{i.name}, Price: #{i.price}, Quantity: #{i.quantity}"  %>
+        </li>
+    <% end %>
+</ul>
