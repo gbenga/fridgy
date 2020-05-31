@@ -1,0 +1,26 @@
+<h2>Welcome back, <%=@user.name%></h2>
+
+
+<% if @user.spices.length > 0 %>
+    <h3>Your top 3 most expensive spices are:</h3>
+    <ol>
+        <% @user.most_expensive_spices.each do |s| %>
+            <li><%= s.name %></li>
+        <% end %>
+    </ol>
+<% else %>
+  <h3>You don't have any spices - go and get some</h3>
+<% end %>
+
+<% if @user.ingredients.length > 0 %>
+    <h3>Your top 3 most expensive ingridients are:</h3>
+    <ol>
+        <% @user.most_expensive_ingredients.each do |i| %>
+            <li><%= i.name %></li>
+        <% end %>
+    </ol>
+<% else %>
+  <h3>You don't have any ingredients - go and get some</h3>
+<% end %>
+
+<h3>Your fridge capacity is <%= @user.fridge.capacity%> </h3>
