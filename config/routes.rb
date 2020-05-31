@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :meals, only: []
   resources :spice_racks, only: []
   resources :spices, only: []
-  resources :ingredients, only: [:index]
+  resources :ingredients, only: [:index, :new, :create]
   resources :fridges, only: []
   resources :users, only: [:show, :new, :create, :edit, :update]
   get '/home', to: "users#sign_in", as: 'home'
